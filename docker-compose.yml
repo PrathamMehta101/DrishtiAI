@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7.2.11-alpine
+    container_name: drishti_redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+
+  celery_worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.worker
+    container_name: drishti_celery_worker_1
+    depends_on:
+      - redis
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/yolo11s.pt:/app/yolo11s.pt
+    restart: unless-stopped
+
+volumes:
+  redis_data:

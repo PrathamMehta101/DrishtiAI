@@ -1,0 +1,1959 @@
+{
+  "session": {
+    "id": "aa8f42b6-e48f-42d8-8547-d6a5ff3b36ed",
+    "hallName": "pratham",
+    "examName": "sem5",
+    "date": "2026-08-23",
+    "cameraId": "CAM-01",
+    "status": "completed",
+    "videoUrl": "http://localhost:8000/api/video/aa8f42b6-e48f-42d8-8547-d6a5ff3b36ed/original",
+    "annotatedVideoUrl": "http://localhost:8000/api/video/aa8f42b6-e48f-42d8-8547-d6a5ff3b36ed/annotated",
+    "heatmapUrl": "http://localhost:8000/api/heatmap/aa8f42b6-e48f-42d8-8547-d6a5ff3b36ed",
+    "motionUrl": "http://localhost:8000/api/motion/aa8f42b6-e48f-42d8-8547-d6a5ff3b36ed",
+    "durationSeconds": 11.867,
+    "videoWidth": 848,
+    "videoHeight": 478,
+    "fps": 29.998,
+    "modelName": "YOLO11s",
+    "device": "0",
+    "totalDetections": 126,
+    "eventCount": 5,
+    "highRiskCount": 2,
+    "pendingReview": 3,
+    "motionEventCount": 7,
+    "aiSummary": "The YOLO11s model detected 5 suspicious events in this session, of which 2 were automatically escalated based on confidence and duration. Manual review of the flagged timestamps is strongly recommended.",
+    "riskLevel": "HIGH",
+    "recommendedAction": "Review escalated events immediately and cross-reference with the annotated video."
+  },
+  "events": [
+    {
+      "id": "evt_a8218ebc",
+      "type": "phone_use",
+      "timestampStart": 0.133,
+      "timestampEnd": 0.133,
+      "confidence": 0.254,
+      "objectsDetected": [
+        "mobile_phone"
+      ],
+      "roi": {
+        "x": 286,
+        "y": 268,
+        "w": 31,
+        "h": 23
+      },
+      "reviewStatus": "pending",
+      "explanation": "Cell Phone detected across 1 consecutive frames (0.13s \u2013 0.13s, 0.0s duration). Peak model confidence: 25%. Brief detection \u2014 candidate may have briefly accessed device."
+    },
+    {
+      "id": "evt_a5e8acf7",
+      "type": "phone_use",
+      "timestampStart": 1.667,
+      "timestampEnd": 4.767,
+      "confidence": 0.373,
+      "objectsDetected": [
+        "mobile_phone"
+      ],
+      "roi": {
+        "x": 157,
+        "y": 390,
+        "w": 44,
+        "h": 21
+      },
+      "reviewStatus": "escalated",
+      "explanation": "Cell Phone detected across 55 consecutive frames (1.67s \u2013 4.77s, 3.1s duration). Peak model confidence: 61%. HIGH RISK. Sustained detection \u2014 candidate likely actively using device."
+    },
+    {
+      "id": "evt_63e06ab3",
+      "type": "phone_use",
+      "timestampStart": 5.4,
+      "timestampEnd": 8.467,
+      "confidence": 0.3194,
+      "objectsDetected": [
+        "mobile_phone"
+      ],
+      "roi": {
+        "x": 299,
+        "y": 255,
+        "w": 36,
+        "h": 27
+      },
+      "reviewStatus": "escalated",
+      "explanation": "Cell Phone detected across 49 consecutive frames (5.40s \u2013 8.47s, 3.07s duration). Peak model confidence: 45%. HIGH RISK. Sustained detection \u2014 candidate likely actively using device."
+    },
+    {
+      "id": "evt_a5addeb1",
+      "type": "phone_use",
+      "timestampStart": 9.001,
+      "timestampEnd": 9.801,
+      "confidence": 0.4031,
+      "objectsDetected": [
+        "mobile_phone"
+      ],
+      "roi": {
+        "x": 170,
+        "y": 393,
+        "w": 36,
+        "h": 17
+      },
+      "reviewStatus": "pending",
+      "explanation": "Cell Phone detected across 8 consecutive frames (9.00s \u2013 9.80s, 0.8s duration). Peak model confidence: 61%. Brief detection \u2014 candidate may have briefly accessed device."
+    },
+    {
+      "id": "evt_e0948060",
+      "type": "phone_use",
+      "timestampStart": 10.801,
+      "timestampEnd": 11.801,
+      "confidence": 0.3128,
+      "objectsDetected": [
+        "mobile_phone"
+      ],
+      "roi": {
+        "x": 310,
+        "y": 266,
+        "w": 38,
+        "h": 25
+      },
+      "reviewStatus": "pending",
+      "explanation": "Cell Phone detected across 13 consecutive frames (10.80s \u2013 11.80s, 1.0s duration). Peak model confidence: 39%. Brief detection \u2014 candidate may have briefly accessed device."
+    }
+  ],
+  "motion": {
+    "success": true,
+    "video_id": "aa8f42b6-e48f-42d8-8547-d6a5ff3b36ed",
+    "video": {
+      "width": 848,
+      "height": 478,
+      "fps": 29.998,
+      "total_frames": 356,
+      "duration": 11.867
+    },
+    "motion": {
+      "method": "OpenCV frame differencing",
+      "diff_threshold": 38,
+      "min_contour_area": 850,
+      "blur_size": 21,
+      "total_motion_frames": 54,
+      "total_motion_events": 7
+    },
+    "motion_frames": [
+      {
+        "frame": 12,
+        "timestamp": 0.4,
+        "timestamp_formatted": "00:00.40",
+        "motion": true,
+        "motion_score": 0.010586,
+        "regions": [
+          {
+            "x1": 145.0,
+            "y1": 382.0,
+            "x2": 225.0,
+            "y2": 419.0,
+            "area": 1308.5
+          },
+          {
+            "x1": 222.0,
+            "y1": 355.0,
+            "x2": 287.0,
+            "y2": 425.0,
+            "area": 1201.5
+          },
+          {
+            "x1": 162.0,
+            "y1": 324.0,
+            "x2": 195.0,
+            "y2": 378.0,
+            "area": 858.5
+          },
+          {
+            "x1": 230.0,
+            "y1": 251.0,
+            "x2": 295.0,
+            "y2": 298.0,
+            "area": 922.5
+          },
+          {
+            "x1": 163.0,
+            "y1": 308.0,
+            "x2": 215.0,
+            "y2": 380.0,
+            "area": 1424.5
+          },
+          {
+            "x1": 203.0,
+            "y1": 302.0,
+            "x2": 289.0,
+            "y2": 427.0,
+            "area": 3472.0
+          },
+          {
+            "x1": 285.0,
+            "y1": 264.0,
+            "x2": 326.0,
+            "y2": 299.0,
+            "area": 857.0
+          },
+          {
+            "x1": 228.0,
+            "y1": 248.0,
+            "x2": 297.0,
+            "y2": 298.0,
+            "area": 1107.0
+          },
+          {
+            "x1": 143.0,
+            "y1": 380.0,
+            "x2": 216.0,
+            "y2": 419.0,
+            "area": 1896.0
+          },
+          {
+            "x1": 214.0,
+            "y1": 310.0,
+            "x2": 265.0,
+            "y2": 395.0,
+            "area": 1195.0
+          },
+          {
+            "x1": 227.0,
+            "y1": 252.0,
+            "x2": 294.0,
+            "y2": 300.0,
+            "area": 977.5
+          }
+        ]
+      },
+      {
+        "frame": 15,
+        "timestamp": 0.5,
+        "timestamp_formatted": "00:00.50",
+        "motion": true,
+        "motion_score": 0.016925,
+        "regions": [
+          {
+            "x1": 163.0,
+            "y1": 308.0,
+            "x2": 215.0,
+            "y2": 380.0,
+            "area": 1424.5
+          },
+          {
+            "x1": 203.0,
+            "y1": 302.0,
+            "x2": 289.0,
+            "y2": 427.0,
+            "area": 3472.0
+          },
+          {
+            "x1": 285.0,
+            "y1": 264.0,
+            "x2": 326.0,
+            "y2": 299.0,
+            "area": 857.0
+          },
+          {
+            "x1": 228.0,
+            "y1": 248.0,
+            "x2": 297.0,
+            "y2": 298.0,
+            "area": 1107.0
+          }
+        ]
+      },
+      {
+        "frame": 17,
+        "timestamp": 0.567,
+        "timestamp_formatted": "00:00.57",
+        "motion": true,
+        "motion_score": 0.004678,
+        "regions": [
+          {
+            "x1": 143.0,
+            "y1": 380.0,
+            "x2": 216.0,
+            "y2": 419.0,
+            "area": 1896.0
+          }
+        ]
+      },
+      {
+        "frame": 18,
+        "timestamp": 0.6,
+        "timestamp_formatted": "00:00.60",
+        "motion": true,
+        "motion_score": 0.00536,
+        "regions": [
+          {
+            "x1": 214.0,
+            "y1": 310.0,
+            "x2": 265.0,
+            "y2": 395.0,
+            "area": 1195.0
+          },
+          {
+            "x1": 227.0,
+            "y1": 252.0,
+            "x2": 294.0,
+            "y2": 300.0,
+            "area": 977.5
+          }
+        ]
+      },
+      {
+        "frame": 47,
+        "timestamp": 1.567,
+        "timestamp_formatted": "00:01.57",
+        "motion": true,
+        "motion_score": 0.002699,
+        "regions": [
+          {
+            "x1": 222.0,
+            "y1": 311.0,
+            "x2": 270.0,
+            "y2": 394.0,
+            "area": 1094.0
+          }
+        ]
+      },
+      {
+        "frame": 68,
+        "timestamp": 2.267,
+        "timestamp_formatted": "00:02.27",
+        "motion": true,
+        "motion_score": 0.00212,
+        "regions": [
+          {
+            "x1": 157.0,
+            "y1": 412.0,
+            "x2": 225.0,
+            "y2": 430.0,
+            "area": 859.5
+          },
+          {
+            "x1": 319.0,
+            "y1": 363.0,
+            "x2": 357.0,
+            "y2": 401.0,
+            "area": 935.5
+          },
+          {
+            "x1": 318.0,
+            "y1": 348.0,
+            "x2": 358.0,
+            "y2": 405.0,
+            "area": 1477.5
+          },
+          {
+            "x1": 307.0,
+            "y1": 344.0,
+            "x2": 353.0,
+            "y2": 401.0,
+            "area": 1827.0
+          },
+          {
+            "x1": 292.0,
+            "y1": 338.0,
+            "x2": 343.0,
+            "y2": 397.0,
+            "area": 1831.5
+          },
+          {
+            "x1": 259.0,
+            "y1": 361.0,
+            "x2": 314.0,
+            "y2": 406.0,
+            "area": 1334.0
+          },
+          {
+            "x1": 252.0,
+            "y1": 365.0,
+            "x2": 308.0,
+            "y2": 408.0,
+            "area": 1344.0
+          },
+          {
+            "x1": 244.0,
+            "y1": 371.0,
+            "x2": 300.0,
+            "y2": 409.0,
+            "area": 1135.5
+          },
+          {
+            "x1": 235.0,
+            "y1": 377.0,
+            "x2": 292.0,
+            "y2": 414.0,
+            "area": 1064.5
+          }
+        ]
+      },
+      {
+        "frame": 69,
+        "timestamp": 2.3,
+        "timestamp_formatted": "00:02.30",
+        "motion": true,
+        "motion_score": 0.002308,
+        "regions": [
+          {
+            "x1": 319.0,
+            "y1": 363.0,
+            "x2": 357.0,
+            "y2": 401.0,
+            "area": 935.5
+          }
+        ]
+      },
+      {
+        "frame": 70,
+        "timestamp": 2.333,
+        "timestamp_formatted": "00:02.33",
+        "motion": true,
+        "motion_score": 0.003645,
+        "regions": [
+          {
+            "x1": 318.0,
+            "y1": 348.0,
+            "x2": 358.0,
+            "y2": 405.0,
+            "area": 1477.5
+          }
+        ]
+      },
+      {
+        "frame": 71,
+        "timestamp": 2.367,
+        "timestamp_formatted": "00:02.37",
+        "motion": true,
+        "motion_score": 0.004507,
+        "regions": [
+          {
+            "x1": 307.0,
+            "y1": 344.0,
+            "x2": 353.0,
+            "y2": 401.0,
+            "area": 1827.0
+          }
+        ]
+      },
+      {
+        "frame": 72,
+        "timestamp": 2.4,
+        "timestamp_formatted": "00:02.40",
+        "motion": true,
+        "motion_score": 0.004518,
+        "regions": [
+          {
+            "x1": 292.0,
+            "y1": 338.0,
+            "x2": 343.0,
+            "y2": 397.0,
+            "area": 1831.5
+          }
+        ]
+      },
+      {
+        "frame": 76,
+        "timestamp": 2.534,
+        "timestamp_formatted": "00:02.53",
+        "motion": true,
+        "motion_score": 0.003291,
+        "regions": [
+          {
+            "x1": 259.0,
+            "y1": 361.0,
+            "x2": 314.0,
+            "y2": 406.0,
+            "area": 1334.0
+          }
+        ]
+      },
+      {
+        "frame": 77,
+        "timestamp": 2.567,
+        "timestamp_formatted": "00:02.57",
+        "motion": true,
+        "motion_score": 0.003316,
+        "regions": [
+          {
+            "x1": 252.0,
+            "y1": 365.0,
+            "x2": 308.0,
+            "y2": 408.0,
+            "area": 1344.0
+          }
+        ]
+      },
+      {
+        "frame": 78,
+        "timestamp": 2.6,
+        "timestamp_formatted": "00:02.60",
+        "motion": true,
+        "motion_score": 0.002801,
+        "regions": [
+          {
+            "x1": 244.0,
+            "y1": 371.0,
+            "x2": 300.0,
+            "y2": 409.0,
+            "area": 1135.5
+          }
+        ]
+      },
+      {
+        "frame": 79,
+        "timestamp": 2.634,
+        "timestamp_formatted": "00:02.63",
+        "motion": true,
+        "motion_score": 0.002626,
+        "regions": [
+          {
+            "x1": 235.0,
+            "y1": 377.0,
+            "x2": 292.0,
+            "y2": 414.0,
+            "area": 1064.5
+          }
+        ]
+      },
+      {
+        "frame": 101,
+        "timestamp": 3.367,
+        "timestamp_formatted": "00:03.37",
+        "motion": true,
+        "motion_score": 0.002952,
+        "regions": [
+          {
+            "x1": 234.0,
+            "y1": 383.0,
+            "x2": 295.0,
+            "y2": 416.0,
+            "area": 1196.5
+          },
+          {
+            "x1": 248.0,
+            "y1": 379.0,
+            "x2": 296.0,
+            "y2": 413.0,
+            "area": 931.5
+          },
+          {
+            "x1": 253.0,
+            "y1": 372.0,
+            "x2": 301.0,
+            "y2": 412.0,
+            "area": 1188.5
+          },
+          {
+            "x1": 258.0,
+            "y1": 368.0,
+            "x2": 302.0,
+            "y2": 408.0,
+            "area": 1182.0
+          },
+          {
+            "x1": 265.0,
+            "y1": 363.0,
+            "x2": 303.0,
+            "y2": 402.0,
+            "area": 953.5
+          },
+          {
+            "x1": 271.0,
+            "y1": 356.0,
+            "x2": 306.0,
+            "y2": 396.0,
+            "area": 895.0
+          },
+          {
+            "x1": 239.0,
+            "y1": 286.0,
+            "x2": 293.0,
+            "y2": 339.0,
+            "area": 1107.0
+          },
+          {
+            "x1": 250.0,
+            "y1": 281.0,
+            "x2": 296.0,
+            "y2": 330.0,
+            "area": 886.0
+          }
+        ]
+      },
+      {
+        "frame": 102,
+        "timestamp": 3.4,
+        "timestamp_formatted": "00:03.40",
+        "motion": true,
+        "motion_score": 0.002298,
+        "regions": [
+          {
+            "x1": 248.0,
+            "y1": 379.0,
+            "x2": 296.0,
+            "y2": 413.0,
+            "area": 931.5
+          }
+        ]
+      },
+      {
+        "frame": 103,
+        "timestamp": 3.434,
+        "timestamp_formatted": "00:03.43",
+        "motion": true,
+        "motion_score": 0.002932,
+        "regions": [
+          {
+            "x1": 253.0,
+            "y1": 372.0,
+            "x2": 301.0,
+            "y2": 412.0,
+            "area": 1188.5
+          }
+        ]
+      },
+      {
+        "frame": 104,
+        "timestamp": 3.467,
+        "timestamp_formatted": "00:03.47",
+        "motion": true,
+        "motion_score": 0.002916,
+        "regions": [
+          {
+            "x1": 258.0,
+            "y1": 368.0,
+            "x2": 302.0,
+            "y2": 408.0,
+            "area": 1182.0
+          }
+        ]
+      },
+      {
+        "frame": 105,
+        "timestamp": 3.5,
+        "timestamp_formatted": "00:03.50",
+        "motion": true,
+        "motion_score": 0.002352,
+        "regions": [
+          {
+            "x1": 265.0,
+            "y1": 363.0,
+            "x2": 303.0,
+            "y2": 402.0,
+            "area": 953.5
+          }
+        ]
+      },
+      {
+        "frame": 106,
+        "timestamp": 3.534,
+        "timestamp_formatted": "00:03.53",
+        "motion": true,
+        "motion_score": 0.002208,
+        "regions": [
+          {
+            "x1": 271.0,
+            "y1": 356.0,
+            "x2": 306.0,
+            "y2": 396.0,
+            "area": 895.0
+          }
+        ]
+      },
+      {
+        "frame": 108,
+        "timestamp": 3.6,
+        "timestamp_formatted": "00:03.60",
+        "motion": true,
+        "motion_score": 0.002731,
+        "regions": [
+          {
+            "x1": 239.0,
+            "y1": 286.0,
+            "x2": 293.0,
+            "y2": 339.0,
+            "area": 1107.0
+          }
+        ]
+      },
+      {
+        "frame": 110,
+        "timestamp": 3.667,
+        "timestamp_formatted": "00:03.67",
+        "motion": true,
+        "motion_score": 0.002186,
+        "regions": [
+          {
+            "x1": 250.0,
+            "y1": 281.0,
+            "x2": 296.0,
+            "y2": 330.0,
+            "area": 886.0
+          }
+        ]
+      },
+      {
+        "frame": 160,
+        "timestamp": 5.334,
+        "timestamp_formatted": "00:05.33",
+        "motion": true,
+        "motion_score": 0.008498,
+        "regions": [
+          {
+            "x1": 176.0,
+            "y1": 323.0,
+            "x2": 210.0,
+            "y2": 370.0,
+            "area": 873.5
+          },
+          {
+            "x1": 270.0,
+            "y1": 253.0,
+            "x2": 335.0,
+            "y2": 302.0,
+            "area": 1618.0
+          },
+          {
+            "x1": 242.0,
+            "y1": 240.0,
+            "x2": 308.0,
+            "y2": 288.0,
+            "area": 953.0
+          }
+        ]
+      },
+      {
+        "frame": 191,
+        "timestamp": 6.367,
+        "timestamp_formatted": "00:06.37",
+        "motion": true,
+        "motion_score": 0.002725,
+        "regions": [
+          {
+            "x1": 270.0,
+            "y1": 249.0,
+            "x2": 333.0,
+            "y2": 284.0,
+            "area": 1104.5
+          }
+        ]
+      },
+      {
+        "frame": 243,
+        "timestamp": 8.101,
+        "timestamp_formatted": "00:08.10",
+        "motion": true,
+        "motion_score": 0.002127,
+        "regions": [
+          {
+            "x1": 240.0,
+            "y1": 244.0,
+            "x2": 305.0,
+            "y2": 293.0,
+            "area": 862.0
+          }
+        ]
+      },
+      {
+        "frame": 275,
+        "timestamp": 9.167,
+        "timestamp_formatted": "00:09.17",
+        "motion": true,
+        "motion_score": 0.002375,
+        "regions": [
+          {
+            "x1": 266.0,
+            "y1": 307.0,
+            "x2": 312.0,
+            "y2": 345.0,
+            "area": 962.5
+          },
+          {
+            "x1": 260.0,
+            "y1": 308.0,
+            "x2": 299.0,
+            "y2": 350.0,
+            "area": 962.5
+          },
+          {
+            "x1": 179.0,
+            "y1": 323.0,
+            "x2": 210.0,
+            "y2": 385.0,
+            "area": 1090.5
+          },
+          {
+            "x1": 232.0,
+            "y1": 321.0,
+            "x2": 285.0,
+            "y2": 393.0,
+            "area": 1461.0
+          },
+          {
+            "x1": 616.0,
+            "y1": 279.0,
+            "x2": 635.0,
+            "y2": 353.0,
+            "area": 918.0
+          },
+          {
+            "x1": 291.0,
+            "y1": 264.0,
+            "x2": 336.0,
+            "y2": 299.0,
+            "area": 889.0
+          },
+          {
+            "x1": 240.0,
+            "y1": 250.0,
+            "x2": 306.0,
+            "y2": 300.0,
+            "area": 963.5
+          },
+          {
+            "x1": 522.0,
+            "y1": 216.0,
+            "x2": 559.0,
+            "y2": 295.0,
+            "area": 1030.0
+          },
+          {
+            "x1": 281.0,
+            "y1": 348.0,
+            "x2": 331.0,
+            "y2": 390.0,
+            "area": 1083.5
+          },
+          {
+            "x1": 251.0,
+            "y1": 325.0,
+            "x2": 300.0,
+            "y2": 364.0,
+            "area": 1066.5
+          },
+          {
+            "x1": 253.0,
+            "y1": 324.0,
+            "x2": 336.0,
+            "y2": 397.0,
+            "area": 2623.5
+          },
+          {
+            "x1": 711.0,
+            "y1": 414.0,
+            "x2": 756.0,
+            "y2": 478.0,
+            "area": 1258.5
+          },
+          {
+            "x1": 661.0,
+            "y1": 384.0,
+            "x2": 715.0,
+            "y2": 428.0,
+            "area": 1548.5
+          },
+          {
+            "x1": 0.0,
+            "y1": 382.0,
+            "x2": 51.0,
+            "y2": 455.0,
+            "area": 1549.0
+          },
+          {
+            "x1": 177.0,
+            "y1": 305.0,
+            "x2": 230.0,
+            "y2": 385.0,
+            "area": 1771.5
+          },
+          {
+            "x1": 614.0,
+            "y1": 273.0,
+            "x2": 636.0,
+            "y2": 356.0,
+            "area": 1224.5
+          },
+          {
+            "x1": 230.0,
+            "y1": 263.0,
+            "x2": 337.0,
+            "y2": 430.0,
+            "area": 6378.5
+          },
+          {
+            "x1": 237.0,
+            "y1": 243.0,
+            "x2": 308.0,
+            "y2": 301.0,
+            "area": 1212.5
+          },
+          {
+            "x1": 811.0,
+            "y1": 213.0,
+            "x2": 848.0,
+            "y2": 294.0,
+            "area": 1351.0
+          },
+          {
+            "x1": 533.0,
+            "y1": 197.0,
+            "x2": 572.0,
+            "y2": 238.0,
+            "area": 931.0
+          },
+          {
+            "x1": 151.0,
+            "y1": 190.0,
+            "x2": 220.0,
+            "y2": 258.0,
+            "area": 1557.0
+          },
+          {
+            "x1": 474.0,
+            "y1": 170.0,
+            "x2": 520.0,
+            "y2": 276.0,
+            "area": 1820.0
+          },
+          {
+            "x1": 651.0,
+            "y1": 149.0,
+            "x2": 696.0,
+            "y2": 228.0,
+            "area": 1329.0
+          },
+          {
+            "x1": 642.0,
+            "y1": 370.0,
+            "x2": 687.0,
+            "y2": 421.0,
+            "area": 1036.0
+          },
+          {
+            "x1": 217.0,
+            "y1": 338.0,
+            "x2": 317.0,
+            "y2": 405.0,
+            "area": 2941.5
+          },
+          {
+            "x1": 172.0,
+            "y1": 326.0,
+            "x2": 213.0,
+            "y2": 387.0,
+            "area": 930.5
+          },
+          {
+            "x1": 610.0,
+            "y1": 273.0,
+            "x2": 641.0,
+            "y2": 372.0,
+            "area": 1528.0
+          },
+          {
+            "x1": 712.0,
+            "y1": 266.0,
+            "x2": 746.0,
+            "y2": 310.0,
+            "area": 883.5
+          },
+          {
+            "x1": 439.0,
+            "y1": 216.0,
+            "x2": 468.0,
+            "y2": 270.0,
+            "area": 920.0
+          },
+          {
+            "x1": 805.0,
+            "y1": 204.0,
+            "x2": 848.0,
+            "y2": 307.0,
+            "area": 2044.5
+          },
+          {
+            "x1": 581.0,
+            "y1": 200.0,
+            "x2": 608.0,
+            "y2": 251.0,
+            "area": 856.0
+          },
+          {
+            "x1": 528.0,
+            "y1": 196.0,
+            "x2": 569.0,
+            "y2": 261.0,
+            "area": 1445.0
+          },
+          {
+            "x1": 164.0,
+            "y1": 192.0,
+            "x2": 215.0,
+            "y2": 256.0,
+            "area": 1117.5
+          },
+          {
+            "x1": 489.0,
+            "y1": 165.0,
+            "x2": 515.0,
+            "y2": 225.0,
+            "area": 853.5
+          },
+          {
+            "x1": 661.0,
+            "y1": 151.0,
+            "x2": 691.0,
+            "y2": 212.0,
+            "area": 890.0
+          },
+          {
+            "x1": 578.0,
+            "y1": 98.0,
+            "x2": 623.0,
+            "y2": 165.0,
+            "area": 1004.0
+          },
+          {
+            "x1": 427.0,
+            "y1": 65.0,
+            "x2": 459.0,
+            "y2": 111.0,
+            "area": 1042.5
+          },
+          {
+            "x1": 243.0,
+            "y1": 367.0,
+            "x2": 305.0,
+            "y2": 410.0,
+            "area": 1528.5
+          },
+          {
+            "x1": 163.0,
+            "y1": 377.0,
+            "x2": 213.0,
+            "y2": 408.0,
+            "area": 929.0
+          }
+        ]
+      },
+      {
+        "frame": 276,
+        "timestamp": 9.201,
+        "timestamp_formatted": "00:09.20",
+        "motion": true,
+        "motion_score": 0.002375,
+        "regions": [
+          {
+            "x1": 260.0,
+            "y1": 308.0,
+            "x2": 299.0,
+            "y2": 350.0,
+            "area": 962.5
+          }
+        ]
+      },
+      {
+        "frame": 277,
+        "timestamp": 9.234,
+        "timestamp_formatted": "00:09.23",
+        "motion": true,
+        "motion_score": 0.015671,
+        "regions": [
+          {
+            "x1": 179.0,
+            "y1": 323.0,
+            "x2": 210.0,
+            "y2": 385.0,
+            "area": 1090.5
+          },
+          {
+            "x1": 232.0,
+            "y1": 321.0,
+            "x2": 285.0,
+            "y2": 393.0,
+            "area": 1461.0
+          },
+          {
+            "x1": 616.0,
+            "y1": 279.0,
+            "x2": 635.0,
+            "y2": 353.0,
+            "area": 918.0
+          },
+          {
+            "x1": 291.0,
+            "y1": 264.0,
+            "x2": 336.0,
+            "y2": 299.0,
+            "area": 889.0
+          },
+          {
+            "x1": 240.0,
+            "y1": 250.0,
+            "x2": 306.0,
+            "y2": 300.0,
+            "area": 963.5
+          },
+          {
+            "x1": 522.0,
+            "y1": 216.0,
+            "x2": 559.0,
+            "y2": 295.0,
+            "area": 1030.0
+          }
+        ]
+      },
+      {
+        "frame": 278,
+        "timestamp": 9.267,
+        "timestamp_formatted": "00:09.27",
+        "motion": true,
+        "motion_score": 0.005304,
+        "regions": [
+          {
+            "x1": 281.0,
+            "y1": 348.0,
+            "x2": 331.0,
+            "y2": 390.0,
+            "area": 1083.5
+          },
+          {
+            "x1": 251.0,
+            "y1": 325.0,
+            "x2": 300.0,
+            "y2": 364.0,
+            "area": 1066.5
+          }
+        ]
+      },
+      {
+        "frame": 279,
+        "timestamp": 9.301,
+        "timestamp_formatted": "00:09.30",
+        "motion": true,
+        "motion_score": 0.006472,
+        "regions": [
+          {
+            "x1": 253.0,
+            "y1": 324.0,
+            "x2": 336.0,
+            "y2": 397.0,
+            "area": 2623.5
+          }
+        ]
+      },
+      {
+        "frame": 280,
+        "timestamp": 9.334,
+        "timestamp_formatted": "00:09.33",
+        "motion": true,
+        "motion_score": 0.054105,
+        "regions": [
+          {
+            "x1": 711.0,
+            "y1": 414.0,
+            "x2": 756.0,
+            "y2": 478.0,
+            "area": 1258.5
+          },
+          {
+            "x1": 661.0,
+            "y1": 384.0,
+            "x2": 715.0,
+            "y2": 428.0,
+            "area": 1548.5
+          },
+          {
+            "x1": 0.0,
+            "y1": 382.0,
+            "x2": 51.0,
+            "y2": 455.0,
+            "area": 1549.0
+          },
+          {
+            "x1": 177.0,
+            "y1": 305.0,
+            "x2": 230.0,
+            "y2": 385.0,
+            "area": 1771.5
+          },
+          {
+            "x1": 614.0,
+            "y1": 273.0,
+            "x2": 636.0,
+            "y2": 356.0,
+            "area": 1224.5
+          },
+          {
+            "x1": 230.0,
+            "y1": 263.0,
+            "x2": 337.0,
+            "y2": 430.0,
+            "area": 6378.5
+          },
+          {
+            "x1": 237.0,
+            "y1": 243.0,
+            "x2": 308.0,
+            "y2": 301.0,
+            "area": 1212.5
+          },
+          {
+            "x1": 811.0,
+            "y1": 213.0,
+            "x2": 848.0,
+            "y2": 294.0,
+            "area": 1351.0
+          },
+          {
+            "x1": 533.0,
+            "y1": 197.0,
+            "x2": 572.0,
+            "y2": 238.0,
+            "area": 931.0
+          },
+          {
+            "x1": 151.0,
+            "y1": 190.0,
+            "x2": 220.0,
+            "y2": 258.0,
+            "area": 1557.0
+          },
+          {
+            "x1": 474.0,
+            "y1": 170.0,
+            "x2": 520.0,
+            "y2": 276.0,
+            "area": 1820.0
+          },
+          {
+            "x1": 651.0,
+            "y1": 149.0,
+            "x2": 696.0,
+            "y2": 228.0,
+            "area": 1329.0
+          }
+        ]
+      },
+      {
+        "frame": 281,
+        "timestamp": 9.367,
+        "timestamp_formatted": "00:09.37",
+        "motion": true,
+        "motion_score": 0.043155,
+        "regions": [
+          {
+            "x1": 642.0,
+            "y1": 370.0,
+            "x2": 687.0,
+            "y2": 421.0,
+            "area": 1036.0
+          },
+          {
+            "x1": 217.0,
+            "y1": 338.0,
+            "x2": 317.0,
+            "y2": 405.0,
+            "area": 2941.5
+          },
+          {
+            "x1": 172.0,
+            "y1": 326.0,
+            "x2": 213.0,
+            "y2": 387.0,
+            "area": 930.5
+          },
+          {
+            "x1": 610.0,
+            "y1": 273.0,
+            "x2": 641.0,
+            "y2": 372.0,
+            "area": 1528.0
+          },
+          {
+            "x1": 712.0,
+            "y1": 266.0,
+            "x2": 746.0,
+            "y2": 310.0,
+            "area": 883.5
+          },
+          {
+            "x1": 439.0,
+            "y1": 216.0,
+            "x2": 468.0,
+            "y2": 270.0,
+            "area": 920.0
+          },
+          {
+            "x1": 805.0,
+            "y1": 204.0,
+            "x2": 848.0,
+            "y2": 307.0,
+            "area": 2044.5
+          },
+          {
+            "x1": 581.0,
+            "y1": 200.0,
+            "x2": 608.0,
+            "y2": 251.0,
+            "area": 856.0
+          },
+          {
+            "x1": 528.0,
+            "y1": 196.0,
+            "x2": 569.0,
+            "y2": 261.0,
+            "area": 1445.0
+          },
+          {
+            "x1": 164.0,
+            "y1": 192.0,
+            "x2": 215.0,
+            "y2": 256.0,
+            "area": 1117.5
+          },
+          {
+            "x1": 489.0,
+            "y1": 165.0,
+            "x2": 515.0,
+            "y2": 225.0,
+            "area": 853.5
+          },
+          {
+            "x1": 661.0,
+            "y1": 151.0,
+            "x2": 691.0,
+            "y2": 212.0,
+            "area": 890.0
+          },
+          {
+            "x1": 578.0,
+            "y1": 98.0,
+            "x2": 623.0,
+            "y2": 165.0,
+            "area": 1004.0
+          },
+          {
+            "x1": 427.0,
+            "y1": 65.0,
+            "x2": 459.0,
+            "y2": 111.0,
+            "area": 1042.5
+          }
+        ]
+      },
+      {
+        "frame": 282,
+        "timestamp": 9.401,
+        "timestamp_formatted": "00:09.40",
+        "motion": true,
+        "motion_score": 0.003771,
+        "regions": [
+          {
+            "x1": 243.0,
+            "y1": 367.0,
+            "x2": 305.0,
+            "y2": 410.0,
+            "area": 1528.5
+          }
+        ]
+      },
+      {
+        "frame": 286,
+        "timestamp": 9.534,
+        "timestamp_formatted": "00:09.53",
+        "motion": true,
+        "motion_score": 0.002292,
+        "regions": [
+          {
+            "x1": 163.0,
+            "y1": 377.0,
+            "x2": 213.0,
+            "y2": 408.0,
+            "area": 929.0
+          }
+        ]
+      },
+      {
+        "frame": 294,
+        "timestamp": 9.801,
+        "timestamp_formatted": "00:09.80",
+        "motion": true,
+        "motion_score": 0.002743,
+        "regions": [
+          {
+            "x1": 186.0,
+            "y1": 389.0,
+            "x2": 245.0,
+            "y2": 414.0,
+            "area": 1112.0
+          },
+          {
+            "x1": 251.0,
+            "y1": 372.0,
+            "x2": 301.0,
+            "y2": 409.0,
+            "area": 1038.5
+          },
+          {
+            "x1": 257.0,
+            "y1": 368.0,
+            "x2": 309.0,
+            "y2": 407.0,
+            "area": 1274.5
+          },
+          {
+            "x1": 214.0,
+            "y1": 338.0,
+            "x2": 264.0,
+            "y2": 387.0,
+            "area": 1240.0
+          },
+          {
+            "x1": 263.0,
+            "y1": 360.0,
+            "x2": 317.0,
+            "y2": 402.0,
+            "area": 1419.0
+          },
+          {
+            "x1": 270.0,
+            "y1": 346.0,
+            "x2": 324.0,
+            "y2": 396.0,
+            "area": 1479.0
+          }
+        ]
+      },
+      {
+        "frame": 295,
+        "timestamp": 9.834,
+        "timestamp_formatted": "00:09.83",
+        "motion": true,
+        "motion_score": 0.002562,
+        "regions": [
+          {
+            "x1": 251.0,
+            "y1": 372.0,
+            "x2": 301.0,
+            "y2": 409.0,
+            "area": 1038.5
+          }
+        ]
+      },
+      {
+        "frame": 296,
+        "timestamp": 9.867,
+        "timestamp_formatted": "00:09.87",
+        "motion": true,
+        "motion_score": 0.006203,
+        "regions": [
+          {
+            "x1": 257.0,
+            "y1": 368.0,
+            "x2": 309.0,
+            "y2": 407.0,
+            "area": 1274.5
+          },
+          {
+            "x1": 214.0,
+            "y1": 338.0,
+            "x2": 264.0,
+            "y2": 387.0,
+            "area": 1240.0
+          }
+        ]
+      },
+      {
+        "frame": 297,
+        "timestamp": 9.901,
+        "timestamp_formatted": "00:09.90",
+        "motion": true,
+        "motion_score": 0.003501,
+        "regions": [
+          {
+            "x1": 263.0,
+            "y1": 360.0,
+            "x2": 317.0,
+            "y2": 402.0,
+            "area": 1419.0
+          }
+        ]
+      },
+      {
+        "frame": 298,
+        "timestamp": 9.934,
+        "timestamp_formatted": "00:09.93",
+        "motion": true,
+        "motion_score": 0.003649,
+        "regions": [
+          {
+            "x1": 270.0,
+            "y1": 346.0,
+            "x2": 324.0,
+            "y2": 396.0,
+            "area": 1479.0
+          }
+        ]
+      },
+      {
+        "frame": 305,
+        "timestamp": 10.167,
+        "timestamp_formatted": "00:10.17",
+        "motion": true,
+        "motion_score": 0.005254,
+        "regions": [
+          {
+            "x1": 301.0,
+            "y1": 384.0,
+            "x2": 347.0,
+            "y2": 422.0,
+            "area": 939.5
+          },
+          {
+            "x1": 303.0,
+            "y1": 358.0,
+            "x2": 364.0,
+            "y2": 400.0,
+            "area": 1190.0
+          },
+          {
+            "x1": 303.0,
+            "y1": 367.0,
+            "x2": 363.0,
+            "y2": 404.0,
+            "area": 1021.0
+          }
+        ]
+      },
+      {
+        "frame": 306,
+        "timestamp": 10.201,
+        "timestamp_formatted": "00:10.20",
+        "motion": true,
+        "motion_score": 0.002519,
+        "regions": [
+          {
+            "x1": 303.0,
+            "y1": 367.0,
+            "x2": 363.0,
+            "y2": 404.0,
+            "area": 1021.0
+          }
+        ]
+      },
+      {
+        "frame": 322,
+        "timestamp": 10.734,
+        "timestamp_formatted": "00:10.73",
+        "motion": true,
+        "motion_score": 0.002552,
+        "regions": [
+          {
+            "x1": 292.0,
+            "y1": 381.0,
+            "x2": 342.0,
+            "y2": 417.0,
+            "area": 1034.5
+          },
+          {
+            "x1": 293.0,
+            "y1": 376.0,
+            "x2": 368.0,
+            "y2": 414.0,
+            "area": 1658.5
+          },
+          {
+            "x1": 302.0,
+            "y1": 371.0,
+            "x2": 366.0,
+            "y2": 411.0,
+            "area": 1562.0
+          },
+          {
+            "x1": 290.0,
+            "y1": 366.0,
+            "x2": 364.0,
+            "y2": 411.0,
+            "area": 1855.5
+          },
+          {
+            "x1": 294.0,
+            "y1": 362.0,
+            "x2": 366.0,
+            "y2": 406.0,
+            "area": 1788.0
+          },
+          {
+            "x1": 312.0,
+            "y1": 353.0,
+            "x2": 365.0,
+            "y2": 387.0,
+            "area": 1152.0
+          }
+        ]
+      },
+      {
+        "frame": 323,
+        "timestamp": 10.767,
+        "timestamp_formatted": "00:10.77",
+        "motion": true,
+        "motion_score": 0.004092,
+        "regions": [
+          {
+            "x1": 293.0,
+            "y1": 376.0,
+            "x2": 368.0,
+            "y2": 414.0,
+            "area": 1658.5
+          }
+        ]
+      },
+      {
+        "frame": 324,
+        "timestamp": 10.801,
+        "timestamp_formatted": "00:10.80",
+        "motion": true,
+        "motion_score": 0.003854,
+        "regions": [
+          {
+            "x1": 302.0,
+            "y1": 371.0,
+            "x2": 366.0,
+            "y2": 411.0,
+            "area": 1562.0
+          }
+        ]
+      },
+      {
+        "frame": 325,
+        "timestamp": 10.834,
+        "timestamp_formatted": "00:10.83",
+        "motion": true,
+        "motion_score": 0.004578,
+        "regions": [
+          {
+            "x1": 290.0,
+            "y1": 366.0,
+            "x2": 364.0,
+            "y2": 411.0,
+            "area": 1855.5
+          }
+        ]
+      },
+      {
+        "frame": 326,
+        "timestamp": 10.867,
+        "timestamp_formatted": "00:10.87",
+        "motion": true,
+        "motion_score": 0.004411,
+        "regions": [
+          {
+            "x1": 294.0,
+            "y1": 362.0,
+            "x2": 366.0,
+            "y2": 406.0,
+            "area": 1788.0
+          }
+        ]
+      },
+      {
+        "frame": 327,
+        "timestamp": 10.901,
+        "timestamp_formatted": "00:10.90",
+        "motion": true,
+        "motion_score": 0.002842,
+        "regions": [
+          {
+            "x1": 312.0,
+            "y1": 353.0,
+            "x2": 365.0,
+            "y2": 387.0,
+            "area": 1152.0
+          }
+        ]
+      },
+      {
+        "frame": 338,
+        "timestamp": 11.267,
+        "timestamp_formatted": "00:11.27",
+        "motion": true,
+        "motion_score": 0.007698,
+        "regions": [
+          {
+            "x1": 351.0,
+            "y1": 309.0,
+            "x2": 389.0,
+            "y2": 347.0,
+            "area": 903.5
+          },
+          {
+            "x1": 471.0,
+            "y1": 206.0,
+            "x2": 503.0,
+            "y2": 267.0,
+            "area": 898.0
+          },
+          {
+            "x1": 510.0,
+            "y1": 181.0,
+            "x2": 542.0,
+            "y2": 271.0,
+            "area": 1319.0
+          },
+          {
+            "x1": 325.0,
+            "y1": 318.0,
+            "x2": 359.0,
+            "y2": 360.0,
+            "area": 1031.5
+          },
+          {
+            "x1": 334.0,
+            "y1": 301.0,
+            "x2": 391.0,
+            "y2": 345.0,
+            "area": 1317.5
+          },
+          {
+            "x1": 304.0,
+            "y1": 298.0,
+            "x2": 381.0,
+            "y2": 347.0,
+            "area": 2272.5
+          },
+          {
+            "x1": 290.0,
+            "y1": 283.0,
+            "x2": 369.0,
+            "y2": 349.0,
+            "area": 1881.0
+          }
+        ]
+      },
+      {
+        "frame": 339,
+        "timestamp": 11.301,
+        "timestamp_formatted": "00:11.30",
+        "motion": true,
+        "motion_score": 0.002545,
+        "regions": [
+          {
+            "x1": 325.0,
+            "y1": 318.0,
+            "x2": 359.0,
+            "y2": 360.0,
+            "area": 1031.5
+          }
+        ]
+      },
+      {
+        "frame": 343,
+        "timestamp": 11.434,
+        "timestamp_formatted": "00:11.43",
+        "motion": true,
+        "motion_score": 0.00325,
+        "regions": [
+          {
+            "x1": 334.0,
+            "y1": 301.0,
+            "x2": 391.0,
+            "y2": 345.0,
+            "area": 1317.5
+          }
+        ]
+      },
+      {
+        "frame": 344,
+        "timestamp": 11.467,
+        "timestamp_formatted": "00:11.47",
+        "motion": true,
+        "motion_score": 0.005606,
+        "regions": [
+          {
+            "x1": 304.0,
+            "y1": 298.0,
+            "x2": 381.0,
+            "y2": 347.0,
+            "area": 2272.5
+          }
+        ]
+      },
+      {
+        "frame": 345,
+        "timestamp": 11.501,
+        "timestamp_formatted": "00:11.50",
+        "motion": true,
+        "motion_score": 0.004641,
+        "regions": [
+          {
+            "x1": 290.0,
+            "y1": 283.0,
+            "x2": 369.0,
+            "y2": 349.0,
+            "area": 1881.0
+          }
+        ]
+      },
+      {
+        "frame": 351,
+        "timestamp": 11.701,
+        "timestamp_formatted": "00:11.70",
+        "motion": true,
+        "motion_score": 0.00357,
+        "regions": [
+          {
+            "x1": 312.0,
+            "y1": 301.0,
+            "x2": 385.0,
+            "y2": 332.0,
+            "area": 1447.0
+          },
+          {
+            "x1": 265.0,
+            "y1": 289.0,
+            "x2": 323.0,
+            "y2": 332.0,
+            "area": 1238.5
+          }
+        ]
+      },
+      {
+        "frame": 352,
+        "timestamp": 11.734,
+        "timestamp_formatted": "00:11.73",
+        "motion": true,
+        "motion_score": 0.003055,
+        "regions": [
+          {
+            "x1": 265.0,
+            "y1": 289.0,
+            "x2": 323.0,
+            "y2": 332.0,
+            "area": 1238.5
+          }
+        ]
+      }
+    ],
+    "motion_events": [
+      {
+        "start_frame": 12,
+        "end_frame": 18,
+        "start_time": 0.4,
+        "end_time": 0.6,
+        "start_timestamp": "00:00.40",
+        "end_timestamp": "00:00.60",
+        "duration": 0.2,
+        "detections": 4,
+        "max_motion_score": 0.016925,
+        "bbox": {
+          "x1": 143.0,
+          "y1": 248.0,
+          "x2": 326.0,
+          "y2": 427.0
+        }
+      },
+      {
+        "start_frame": 68,
+        "end_frame": 79,
+        "start_time": 2.267,
+        "end_time": 2.634,
+        "start_timestamp": "00:02.27",
+        "end_timestamp": "00:02.63",
+        "duration": 0.367,
+        "detections": 9,
+        "max_motion_score": 0.004518,
+        "bbox": {
+          "x1": 157.0,
+          "y1": 338.0,
+          "x2": 358.0,
+          "y2": 430.0
+        }
+      },
+      {
+        "start_frame": 101,
+        "end_frame": 110,
+        "start_time": 3.367,
+        "end_time": 3.667,
+        "start_timestamp": "00:03.37",
+        "end_timestamp": "00:03.67",
+        "duration": 0.3,
+        "detections": 8,
+        "max_motion_score": 0.002952,
+        "bbox": {
+          "x1": 234.0,
+          "y1": 281.0,
+          "x2": 306.0,
+          "y2": 416.0
+        }
+      },
+      {
+        "start_frame": 275,
+        "end_frame": 286,
+        "start_time": 9.167,
+        "end_time": 9.534,
+        "start_timestamp": "00:09.17",
+        "end_timestamp": "00:09.53",
+        "duration": 0.367,
+        "detections": 9,
+        "max_motion_score": 0.054105,
+        "bbox": {
+          "x1": 0.0,
+          "y1": 65.0,
+          "x2": 848.0,
+          "y2": 478.0
+        }
+      },
+      {
+        "start_frame": 294,
+        "end_frame": 298,
+        "start_time": 9.801,
+        "end_time": 9.934,
+        "start_timestamp": "00:09.80",
+        "end_timestamp": "00:09.93",
+        "duration": 0.133,
+        "detections": 5,
+        "max_motion_score": 0.006203,
+        "bbox": {
+          "x1": 186.0,
+          "y1": 338.0,
+          "x2": 324.0,
+          "y2": 414.0
+        }
+      },
+      {
+        "start_frame": 322,
+        "end_frame": 327,
+        "start_time": 10.734,
+        "end_time": 10.901,
+        "start_timestamp": "00:10.73",
+        "end_timestamp": "00:10.90",
+        "duration": 0.167,
+        "detections": 6,
+        "max_motion_score": 0.004578,
+        "bbox": {
+          "x1": 290.0,
+          "y1": 353.0,
+          "x2": 368.0,
+          "y2": 417.0
+        }
+      },
+      {
+        "start_frame": 338,
+        "end_frame": 345,
+        "start_time": 11.267,
+        "end_time": 11.501,
+        "start_timestamp": "00:11.27",
+        "end_timestamp": "00:11.50",
+        "duration": 0.234,
+        "detections": 5,
+        "max_motion_score": 0.007698,
+        "bbox": {
+          "x1": 290.0,
+          "y1": 181.0,
+          "x2": 542.0,
+          "y2": 360.0
+        }
+      }
+    ]
+  }
+}

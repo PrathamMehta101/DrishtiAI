@@ -1,0 +1,339 @@
+{
+  "video": {
+    "width": 848,
+    "height": 478,
+    "fps": 29.989,
+    "total_frames": 267,
+    "duration": 8.903
+  },
+  "model": {
+    "name": "YOLO11s",
+    "type": "pretrained",
+    "confidence_threshold": 0.25
+  },
+  "detections": [
+    {
+      "frame": 116,
+      "timestamp": 3.868,
+      "timestamp_formatted": "00:03.87",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.2551,
+      "bbox": {
+        "x1": 270.09,
+        "y1": 317.64,
+        "x2": 353.09,
+        "y2": 337.84
+      }
+    },
+    {
+      "frame": 117,
+      "timestamp": 3.901,
+      "timestamp_formatted": "00:03.90",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.4845,
+      "bbox": {
+        "x1": 270.44,
+        "y1": 316.38,
+        "x2": 353.92,
+        "y2": 340.53
+      }
+    },
+    {
+      "frame": 118,
+      "timestamp": 3.935,
+      "timestamp_formatted": "00:03.93",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.3213,
+      "bbox": {
+        "x1": 272.17,
+        "y1": 317.14,
+        "x2": 356.33,
+        "y2": 341.93
+      }
+    },
+    {
+      "frame": 151,
+      "timestamp": 5.035,
+      "timestamp_formatted": "00:05.04",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.4289,
+      "bbox": {
+        "x1": 294.36,
+        "y1": 316.76,
+        "x2": 364.86,
+        "y2": 346.05
+      }
+    },
+    {
+      "frame": 152,
+      "timestamp": 5.068,
+      "timestamp_formatted": "00:05.07",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.4091,
+      "bbox": {
+        "x1": 290.75,
+        "y1": 315.52,
+        "x2": 364.14,
+        "y2": 344.82
+      }
+    },
+    {
+      "frame": 157,
+      "timestamp": 5.235,
+      "timestamp_formatted": "00:05.24",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.2579,
+      "bbox": {
+        "x1": 287.9,
+        "y1": 308.48,
+        "x2": 358.6,
+        "y2": 340.96
+      }
+    },
+    {
+      "frame": 160,
+      "timestamp": 5.335,
+      "timestamp_formatted": "00:05.34",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.287,
+      "bbox": {
+        "x1": 289.24,
+        "y1": 305.61,
+        "x2": 356.42,
+        "y2": 332.07
+      }
+    },
+    {
+      "frame": 163,
+      "timestamp": 5.435,
+      "timestamp_formatted": "00:05.44",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.2568,
+      "bbox": {
+        "x1": 287.79,
+        "y1": 301.81,
+        "x2": 353.73,
+        "y2": 334.08
+      }
+    },
+    {
+      "frame": 182,
+      "timestamp": 6.069,
+      "timestamp_formatted": "00:06.07",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.2732,
+      "bbox": {
+        "x1": 273.99,
+        "y1": 265.11,
+        "x2": 335.98,
+        "y2": 310.6
+      }
+    },
+    {
+      "frame": 183,
+      "timestamp": 6.102,
+      "timestamp_formatted": "00:06.10",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.3088,
+      "bbox": {
+        "x1": 273.14,
+        "y1": 263.8,
+        "x2": 331.29,
+        "y2": 306.7
+      }
+    },
+    {
+      "frame": 184,
+      "timestamp": 6.136,
+      "timestamp_formatted": "00:06.14",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.278,
+      "bbox": {
+        "x1": 270.04,
+        "y1": 263.48,
+        "x2": 327.85,
+        "y2": 305.55
+      }
+    },
+    {
+      "frame": 185,
+      "timestamp": 6.169,
+      "timestamp_formatted": "00:06.17",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.2859,
+      "bbox": {
+        "x1": 268.41,
+        "y1": 260.6,
+        "x2": 324.34,
+        "y2": 305.2
+      }
+    },
+    {
+      "frame": 186,
+      "timestamp": 6.202,
+      "timestamp_formatted": "00:06.20",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.3162,
+      "bbox": {
+        "x1": 266.17,
+        "y1": 258.99,
+        "x2": 323.71,
+        "y2": 304.19
+      }
+    },
+    {
+      "frame": 187,
+      "timestamp": 6.236,
+      "timestamp_formatted": "00:06.24",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.3028,
+      "bbox": {
+        "x1": 266.13,
+        "y1": 258.62,
+        "x2": 323.85,
+        "y2": 305.04
+      }
+    },
+    {
+      "frame": 188,
+      "timestamp": 6.269,
+      "timestamp_formatted": "00:06.27",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.3914,
+      "bbox": {
+        "x1": 266.74,
+        "y1": 260.48,
+        "x2": 324.37,
+        "y2": 307.15
+      }
+    },
+    {
+      "frame": 189,
+      "timestamp": 6.302,
+      "timestamp_formatted": "00:06.30",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.3002,
+      "bbox": {
+        "x1": 269.05,
+        "y1": 259.9,
+        "x2": 326.72,
+        "y2": 307.61
+      }
+    },
+    {
+      "frame": 191,
+      "timestamp": 6.369,
+      "timestamp_formatted": "00:06.37",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.3479,
+      "bbox": {
+        "x1": 271.02,
+        "y1": 260.62,
+        "x2": 329.73,
+        "y2": 307.28
+      }
+    },
+    {
+      "frame": 192,
+      "timestamp": 6.402,
+      "timestamp_formatted": "00:06.40",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.358,
+      "bbox": {
+        "x1": 273.13,
+        "y1": 260.46,
+        "x2": 330.67,
+        "y2": 307.49
+      }
+    },
+    {
+      "frame": 193,
+      "timestamp": 6.436,
+      "timestamp_formatted": "00:06.44",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.3277,
+      "bbox": {
+        "x1": 273.54,
+        "y1": 261.37,
+        "x2": 332.56,
+        "y2": 307.99
+      }
+    },
+    {
+      "frame": 194,
+      "timestamp": 6.469,
+      "timestamp_formatted": "00:06.47",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.39,
+      "bbox": {
+        "x1": 273.18,
+        "y1": 262.12,
+        "x2": 334.89,
+        "y2": 309.91
+      }
+    },
+    {
+      "frame": 199,
+      "timestamp": 6.636,
+      "timestamp_formatted": "00:06.64",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.351,
+      "bbox": {
+        "x1": 271.95,
+        "y1": 263.7,
+        "x2": 319.3,
+        "y2": 305.85
+      }
+    },
+    {
+      "frame": 226,
+      "timestamp": 7.536,
+      "timestamp_formatted": "00:07.54",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.3198,
+      "bbox": {
+        "x1": 347.47,
+        "y1": 281.17,
+        "x2": 376.8,
+        "y2": 323.53
+      }
+    },
+    {
+      "frame": 227,
+      "timestamp": 7.569,
+      "timestamp_formatted": "00:07.57",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.4012,
+      "bbox": {
+        "x1": 349.6,
+        "y1": 280.45,
+        "x2": 375.38,
+        "y2": 318.06
+      }
+    }
+  ],
+  "total_detections": 23
+}

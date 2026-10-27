@@ -1,0 +1,16 @@
+{
+  "video": {
+    "width": 1280,
+    "height": 720,
+    "fps": 24.0,
+    "total_frames": 121,
+    "duration": 5.042
+  },
+  "model": {
+    "name": "YOLO11s",
+    "type": "pretrained",
+    "confidence_threshold": 0.25
+  },
+  "detections": [],
+  "total_detections": 0
+}

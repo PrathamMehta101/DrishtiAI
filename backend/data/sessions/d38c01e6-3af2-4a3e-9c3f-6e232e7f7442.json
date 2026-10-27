@@ -1,0 +1,45 @@
+{
+  "session": {
+    "id": "d38c01e6-3af2-4a3e-9c3f-6e232e7f7442",
+    "hallName": "Cool Hall",
+    "examName": "Biology",
+    "date": "2026-08-22",
+    "cameraId": "CAM-01",
+    "status": "completed",
+    "videoUrl": "http://localhost:8000/api/video/d38c01e6-3af2-4a3e-9c3f-6e232e7f7442/original",
+    "annotatedVideoUrl": "http://localhost:8000/api/video/d38c01e6-3af2-4a3e-9c3f-6e232e7f7442/annotated",
+    "heatmapUrl": "http://localhost:8000/api/heatmap/d38c01e6-3af2-4a3e-9c3f-6e232e7f7442",
+    "durationSeconds": 7.866,
+    "videoWidth": 848,
+    "videoHeight": 478,
+    "fps": 30.001,
+    "modelName": "YOLO11s",
+    "totalDetections": 63,
+    "eventCount": 1,
+    "highRiskCount": 1,
+    "pendingReview": 0,
+    "aiSummary": "The YOLO11s model detected 1 suspicious event in this session, of which 1 was automatically escalated based on confidence and duration. Manual review of the flagged timestamps is strongly recommended.",
+    "riskLevel": "HIGH",
+    "recommendedAction": "Review escalated events immediately and cross-reference with the annotated video."
+  },
+  "events": [
+    {
+      "id": "evt_6e1731fe",
+      "type": "phone_use",
+      "timestampStart": 2.733,
+      "timestampEnd": 6.2,
+      "confidence": 0.4602,
+      "objectsDetected": [
+        "mobile_phone"
+      ],
+      "roi": {
+        "x": 299,
+        "y": 267,
+        "w": 51,
+        "h": 49
+      },
+      "reviewStatus": "escalated",
+      "explanation": "Cell Phone detected across 63 consecutive frames (2.73s \u2013 6.20s, 3.47s duration). Peak model confidence: 67%. HIGH RISK. Sustained detection \u2014 candidate likely actively using device."
+    }
+  ]
+}

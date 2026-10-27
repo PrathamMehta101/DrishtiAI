@@ -1,0 +1,99 @@
+{
+  "session": {
+    "id": "75fe547a-191f-446c-a259-f34d04fdd42e",
+    "hallName": "Tough Phone Test",
+    "examName": "Physics",
+    "date": "2026-08-22",
+    "cameraId": "CAM-01",
+    "status": "completed",
+    "videoUrl": "http://localhost:8000/api/video/75fe547a-191f-446c-a259-f34d04fdd42e/original",
+    "annotatedVideoUrl": "http://localhost:8000/api/video/75fe547a-191f-446c-a259-f34d04fdd42e/annotated",
+    "heatmapUrl": "http://localhost:8000/api/heatmap/75fe547a-191f-446c-a259-f34d04fdd42e",
+    "durationSeconds": 8.903,
+    "videoWidth": 848,
+    "videoHeight": 478,
+    "fps": 29.989,
+    "modelName": "YOLO11s",
+    "totalDetections": 23,
+    "eventCount": 4,
+    "highRiskCount": 0,
+    "pendingReview": 4,
+    "aiSummary": "The YOLO11s model detected 4 suspicious events in this session, of which 0 were automatically escalated based on confidence and duration. Manual review of the flagged timestamps is strongly recommended.",
+    "riskLevel": "MEDIUM",
+    "recommendedAction": "Review escalated events immediately and cross-reference with the annotated video."
+  },
+  "events": [
+    {
+      "id": "evt_bf8d31b9",
+      "type": "phone_use",
+      "timestampStart": 3.868,
+      "timestampEnd": 3.935,
+      "confidence": 0.3536,
+      "objectsDetected": [
+        "mobile_phone"
+      ],
+      "roi": {
+        "x": 270,
+        "y": 316,
+        "w": 83,
+        "h": 24
+      },
+      "reviewStatus": "pending",
+      "explanation": "Cell Phone detected across 3 consecutive frames (3.87s \u2013 3.94s, 0.07s duration). Peak model confidence: 48%. Brief detection \u2014 candidate may have briefly accessed device."
+    },
+    {
+      "id": "evt_81aacba6",
+      "type": "phone_use",
+      "timestampStart": 5.035,
+      "timestampEnd": 5.435,
+      "confidence": 0.3279,
+      "objectsDetected": [
+        "mobile_phone"
+      ],
+      "roi": {
+        "x": 294,
+        "y": 317,
+        "w": 70,
+        "h": 29
+      },
+      "reviewStatus": "pending",
+      "explanation": "Cell Phone detected across 5 consecutive frames (5.04s \u2013 5.43s, 0.4s duration). Peak model confidence: 43%. Brief detection \u2014 candidate may have briefly accessed device."
+    },
+    {
+      "id": "evt_0c54fb3d",
+      "type": "phone_use",
+      "timestampStart": 6.069,
+      "timestampEnd": 6.636,
+      "confidence": 0.3255,
+      "objectsDetected": [
+        "mobile_phone"
+      ],
+      "roi": {
+        "x": 267,
+        "y": 260,
+        "w": 58,
+        "h": 47
+      },
+      "reviewStatus": "pending",
+      "explanation": "Cell Phone detected across 13 consecutive frames (6.07s \u2013 6.64s, 0.57s duration). Peak model confidence: 39%. Brief detection \u2014 candidate may have briefly accessed device."
+    },
+    {
+      "id": "evt_ec36a2a7",
+      "type": "phone_use",
+      "timestampStart": 7.536,
+      "timestampEnd": 7.569,
+      "confidence": 0.3605,
+      "objectsDetected": [
+        "mobile_phone"
+      ],
+      "roi": {
+        "x": 350,
+        "y": 280,
+        "w": 26,
+        "h": 38
+      },
+      "reviewStatus": "pending",
+      "explanation": "Cell Phone detected across 2 consecutive frames (7.54s \u2013 7.57s, 0.03s duration). Peak model confidence: 40%. Brief detection \u2014 candidate may have briefly accessed device."
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+# Distributed Task Queue with Celery, Redis & Docker
+
+This plan outlines the implementation of a distributed task queue using Celery and Redis to offload heavy YOLO inference and OpenCV motion analysis to background worker nodes, providing non-blocking asynchronous processing and real-time task status polling.
+
+## Proposed Architecture
+
+## Proposed Architecture: Parallel Heavy CV Tasks + Downstream Aggregation
+
+You have made a spot-on architectural observation! Event clustering, Heatmaps, and Groq AI depend directly on the output of YOLO detections and OpenCV motion frames.
+
+Furthermore, **YOLO inference** and **OpenCV motion analysis** are independent of each other! That means we can run them in **parallel** across workers using Celery:
+
+```mermaid
+graph TD
+    Client[Frontend UI] -->|1. Upload Video| API[FastAPI Server]
+    API -->|2. Dispatch Parallel Tasks| Redis[(Redis Broker:6379)]
+    API -->|3. Return task_id immediately| Client
+
+    subgraph "Distributed Background Workers (Heavy Compute)"
+        Redis -->|Task A| Worker1[Worker Node: YOLO Inference]
+        Redis -->|Task B| Worker2[Worker Node: OpenCV Motion]
+    end
+
+    Worker1 -->|YOLO Detections| Aggregator[Aggregation & Finalization]
+    Worker2 -->|Motion Events| Aggregator
+
+    subgraph "Downstream Fast Steps (<2 sec)"
+        Aggregator --> Step1[Event Clustering ~5ms]
+        Aggregator --> Step2[Heatmap Generation ~20ms]
+        Aggregator --> Step3[Groq AI Summary ~1.5s]
+        Aggregator --> Step4[Save Session JSON]
+    end
+
+    Aggregator -->|Store Result| Redis
+    Client -->|4. Poll Status & Progress| API
+    API -->|5. Return Live Progress / Session| Client
+```
+
+### Why this design is optimal:
+1. **Parallel Speedup:** YOLO and OpenCV Motion execute at the same time on worker processes instead of waiting for each other sequentially.
+2. **Resource Isolation:** The heavy GPU/CPU crunching is isolated to worker nodes, so the FastAPI web server remains instant (<100ms response time).
+3. **Downstream Pipeline:** As soon as YOLO + Motion complete, the lightweight downstream steps (Event Clustering, Heatmaps, and Groq AI) execute automatically to complete the session.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Windows Celery Worker Note:**
+> Celery on Windows uses `--pool=solo` or `--pool=threads` (because standard fork is not supported on Windows). We will configure the Celery worker commands and Docker container configurations accordingly.
+
+## Proposed Changes
+
+### Backend Dependencies & Config
+
+#### [MODIFY] [requirements.txt](file:///c:/Users/PRATHAM/DI2_33_Genesis/backend/requirements.txt)
+- Add `celery>=5.3.6` and `redis>=5.0.3`.
+
+#### [NEW] [celery_app.py](file:///c:/Users/PRATHAM/DI2_33_Genesis/backend/celery_app.py)
+- Celery app instance configured with Redis broker URL and result backend.
+- Supports environment variables for flexible scaling in Docker or cloud.
+
+#### [NEW] [tasks.py](file:///c:/Users/PRATHAM/DI2_33_Genesis/backend/tasks.py)
+- Celery task `analyze_video_task(video_id, ...)` executing:
+  1. YOLO detection (`process_video`)
+  2. OpenCV motion analysis (`process_motion`)
+  3. Event clustering & heatmap generation (`build_events`, `generate_heatmap`)
+  4. Groq AI summary generation (`generate_summary`)
+  5. Session persistence (`data/sessions/<video_id>.json`)
+- Includes granular progress updates (`PROCESSING: 15% -> 50% -> 75% -> 90% -> 100%`).
+
+#### [MODIFY] [main.py](file:///c:/Users/PRATHAM/DI2_33_Genesis/backend/main.py)
+- Update `/api/analyze` to save the raw uploaded video and dispatch `analyze_video_task.delay(...)`, returning `task_id` and `video_id` in <1 second.
+- Add `/api/task/{task_id}` endpoint to query task status, stage, progress percentage, and final session output.
+
+### Docker & Distributed Worker Setup
+
+#### [NEW] [docker-compose.yml](file:///c:/Users/PRATHAM/DI2_33_Genesis/docker-compose.yml)
+- Docker Compose definition for:
+  - `redis`: Redis broker on port 6379
+  - `celery_worker`: Scalable worker node(s) running Celery with GPU/CPU support
+  - Shared volume for video data and weights (`backend/data`, `backend/yolo11s.pt`)
+
+#### [NEW] [Dockerfile.worker](file:///c:/Users/PRATHAM/DI2_33_Genesis/backend/Dockerfile.worker)
+- Container definition for running independent background worker nodes.
+
+#### [NEW] [run_worker.bat](file:///c:/Users/PRATHAM/DI2_33_Genesis/backend/run_worker.bat)
+- Quick Windows batch script to launch a local Celery worker with `--pool=solo`.
+
+### Frontend Compatibility
+
+#### [INVESTIGATE & MODIFY] Frontend upload / polling
+- Inspect frontend `drishti-ui` to support polling `/api/task/{task_id}` and showing real-time progress stage bars.
+
+## Verification Plan
+
+### Automated / Manual Verification
+1. **Start Redis Container**: Run `docker run -d --name drishti-redis -p 6379:6379 redis:alpine` and verify connection.
+2. **Install Celery & Redis**: Verify `import celery, redis` works.
+3. **Start Celery Worker**: Run `celery -A celery_app.celery_app worker --loglevel=info --pool=solo`.
+4. **Trigger Video Upload**: Test `/api/analyze` with sample video, verify it returns `task_id` immediately without hanging.
+5. **Verify Task Execution**: Watch Celery worker process YOLO and OpenCV stages and save session files in `data/sessions/`.
+6. **Verify Status Endpoint**: Check `/api/task/<task_id>` returns progression and final completed result.

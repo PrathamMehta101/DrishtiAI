@@ -1,0 +1,46 @@
+{
+  "video": {
+    "width": 1280,
+    "height": 720,
+    "fps": 12.083,
+    "total_frames": 3405,
+    "duration": 281.793
+  },
+  "model": {
+    "name": "YOLO11s",
+    "type": "pretrained",
+    "device": "0",
+    "confidence_threshold": 0.25
+  },
+  "detections": [
+    {
+      "frame": 1868,
+      "timestamp": 154.593,
+      "timestamp_formatted": "02:34.59",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.4335,
+      "bbox": {
+        "x1": 186.54,
+        "y1": 434.27,
+        "x2": 221.11,
+        "y2": 472.61
+      }
+    },
+    {
+      "frame": 1868,
+      "timestamp": 154.593,
+      "timestamp_formatted": "02:34.59",
+      "class_id": 67,
+      "class_name": "cell phone",
+      "confidence": 0.3003,
+      "bbox": {
+        "x1": 188.36,
+        "y1": 443.71,
+        "x2": 222.28,
+        "y2": 473.03
+      }
+    }
+  ],
+  "total_detections": 2
+}
